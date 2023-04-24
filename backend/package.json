@@ -1,28 +1,27 @@
 {
-  "name": "probau",
+  "name": "backend",
   "private": true,
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi",
-    "upgrade": "yarn yarn-upgrade-all"
+    "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.6.1",
-    "@strapi/plugin-users-permissions": "4.6.1",
-    "@strapi/strapi": "4.6.1",
+    "@strapi/plugin-i18n": "4.9.2",
+    "@strapi/plugin-users-permissions": "4.9.2",
+    "@strapi/strapi": "4.9.2",
     "better-sqlite3": "8.0.1",
-    "yarn-upgrade-all": "^0.7.2"
+    "strapi-plugin-menus": "^1.4.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "bronisMateusz"
   },
   "strapi": {
-    "uuid": "b77ef350-acb9-49db-835f-55b5fa847b74"
+    "uuid": "ad861109-e1b2-484b-ad59-8c0b00a0e508"
   },
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
