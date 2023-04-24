@@ -10,4 +10,4 @@ import MainMenu from '@/components/MainMenu.vue'
 
 <script></script>
 
-<style scoped></style>
+<style lang="scss"></style>
