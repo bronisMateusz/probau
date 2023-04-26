@@ -4,8 +4,7 @@ module.exports = (plugin) => {
   // Get current `MenuItem` attributes.
   const defaultAttrs = plugin.contentTypes["menu-item"].schema.attributes;
 
-  // Define custom attributes for `MenuItem` the same way they would be defined
-  // on any other schema.
+  // Define custom attributes for `MenuItem`
   const customAttrs = {
     additional_attributes: {
       type: "enumeration",
