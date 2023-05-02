@@ -1,3 +1,17 @@
 {
-  "name": "probau"
+  "name": "probau",
+  "private": true,
+  "workspaces": [
+    "./*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "dev:backend": "yarn workspace backend dev",
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev": "npm-run-all --parallel dev:backend dev:frontend"
+  },
+  "packageManager": "yarn@1.22.19",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }
