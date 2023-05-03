@@ -9,13 +9,13 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.10.1",
-    "@strapi/plugin-users-permissions": "4.10.1",
-    "@strapi/strapi": "4.10.1",
-    "better-sqlite3": "8.3.0",
-    "strapi-plugin-menus": "^1.4.1"
+    "@strapi/plugin-i18n": "^4.10.1",
+    "@strapi/plugin-users-permissions": "^4.10.1",
+    "@strapi/strapi": "^4.10.1",
+    "better-sqlite3": "^8.3.0",
+    "strapi-plugin-menus": "^1.4.1",
+    "util": "^0.12.5"
   },
   "author": {
     "name": "bronisMateusz"
@@ -27,5 +27,6 @@
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "packageManager": "yarn@1.22.19"
 }
