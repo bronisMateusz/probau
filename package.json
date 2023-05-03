@@ -11,7 +11,8 @@
     "build": "yarn workspaces run build",
     "dev:backend": "yarn workspace backend dev",
     "dev:frontend": "yarn workspace frontend dev",
-    "dev": "npm-run-all --parallel dev:backend dev:frontend"
+    "dev": "npm-run-all --parallel dev:backend dev:frontend",
+    "start": "yarn workspace backend start"
   },
   "packageManager": "yarn@1.22.19",
   "devDependencies": {
