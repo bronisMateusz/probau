@@ -4,6 +4,9 @@
 node_modules/
 dist/
 
+# Ignore package-lock.json
+package-lock.json
+
 # Ignore yarn specific files
 .yarn/*
 !.yarn/patches
