@@ -1,20 +1,21 @@
 const express = require('express');
-const serveStatic = require('serve-static');
 const path = require('path');
 
-// Serve the backend API
-const api = require('./backend/app');
-
-// Serve the frontend app
 const app = express();
-app.use(
-  '/',
-  serveStatic(path.join(__dirname, 'frontend'), { index: 'index.html' })
-);
-app.use(api);
+
+// Serve static files from the "frontend" directory
+app.use(express.static(path.join(__dirname, 'frontend')));
+
+// Serve the backend API
+// ...
+
+// Catch-all route to serve the frontend app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+});
 
 // Start the server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`App listening on port ${port}`);
+const PORT = process.env.PORT || 5173; // Use the PORT environment variable if it exists, or default to 5173
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
