@@ -16,7 +16,8 @@
     "better-sqlite3": "^8.3.0",
     "pg": "^8.10.0",
     "pg-connection-string": "^2.5.0",
-    "strapi-plugin-menus": "^1.4.1"
+    "strapi-plugin-menus": "^1.4.1",
+    "util": "^0.12.5"
   },
   "author": {
     "name": "bronisMateusz"
