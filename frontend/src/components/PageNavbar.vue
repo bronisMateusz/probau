@@ -30,7 +30,7 @@ onMounted(() => {
   // Handle any errors that may occur
   const handleError = (error) => console.error('There was a problem with the request:', error)
 
-  fetch('http://localhost:1337/api/menus/1?populate=*')
+  fetch('http://192.168.0.4/:1337/api/menus/1?populate=*')
     .then(handleResponse)
     .then(handleData)
     .catch(handleError)
