@@ -39,9 +39,9 @@ onMounted(() => {
     </h2>
     <strong class="contact-information__address">{{ attributes.address }}</strong>
     <br />
-    <a :href="`tel:${attributes.phone_number}`" class="contact-information__link">{{
-      attributes.phone_number
-    }}</a>
+    <a :href="`tel:${attributes.phone_number}`" class="contact-information__link">
+      {{ attributes.phone_number }}
+    </a>
     <br />
     <a :href="`mailto:${attributes.mail}`" class="contact-information__link">{{
       attributes.mail
