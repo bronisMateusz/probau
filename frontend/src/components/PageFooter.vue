@@ -105,7 +105,7 @@ const currentYear = ref(new Date().getFullYear())
       padding: 8px;
     }
 
-    @media (min-width: $lg) {
+    @media (min-width: $xl) {
       justify-content: flex-end;
 
       a {
@@ -116,8 +116,12 @@ const currentYear = ref(new Date().getFullYear())
 
   &__social-menu {
     max-width: 360px;
-    margin-left: auto;
+    margin: 0 auto;
     width: 100%;
+
+    @media (min-width: $xl) {
+      margin-right: 0;
+    }
   }
 
   &__copyright {
@@ -128,9 +132,12 @@ const currentYear = ref(new Date().getFullYear())
     text-align: center;
 
     @media (min-width: $lg) {
+      font-size: 1rem;
+      padding-right: 16px;
+    }
+    @media (min-width: $xl) {
       font-size: 1.25rem;
       text-align: right;
-      padding-right: 16px;
     }
   }
 }
