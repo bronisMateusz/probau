@@ -4,21 +4,23 @@ import MainMenu from '@/components/MainMenu.vue'
 </script>
 
 <template>
-  <footer class="footer col-50-50">
-    <div class="footer__column">
-      <div class="footer__logos">
-        <a href="/">
-          <img src="@/assets/images/probau-logo.svg" alt="Probau logo" />
-        </a>
-        <a href="http://importerkoparek.eu/de/" target="_blank">
-          <img src="@/assets/images/kingway-logo.svg" alt="Kingway logo" />
-        </a>
+  <footer class="footer">
+    <div class="container col-50-50">
+      <div class="footer__column">
+        <div class="footer__logos">
+          <a href="/">
+            <img src="@/assets/images/probau-logo.svg" alt="Probau logo" />
+          </a>
+          <a href="http://importerkoparek.eu/de/" target="_blank">
+            <img src="@/assets/images/kingway-logo.svg" alt="Kingway logo" />
+          </a>
+        </div>
+        <contact-information :invert-colors="true" class="footer__contact" />
       </div>
-      <contact-information :invert-colors="true" class="footer__contact" />
-    </div>
-    <div class="footer__column">
-      <main-menu class="footer__menu" />
-      <small class="footer__copyright"> ©2023 Probau Jakub Dylus Alle Rechte vorbehalten </small>
+      <div class="footer__column">
+        <main-menu class="footer__menu" />
+        <small class="footer__copyright"> ©2023 Probau Jakub Dylus Alle Rechte vorbehalten </small>
+      </div>
     </div>
   </footer>
 </template>
@@ -31,6 +33,13 @@ import MainMenu from '@/components/MainMenu.vue'
 
   &__column {
     padding: 60px 20px;
+
+    @media (min-width: $lg) {
+      padding: 120px 20px;
+    }
+    @media (min-width: $xxl) {
+      padding: 120px 0;
+    }
 
     &:first-child {
       $border-style: 1px solid $color-tertiary;
