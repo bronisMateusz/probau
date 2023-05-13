@@ -1,7 +1,10 @@
 <script setup>
+import { ref } from 'vue'
 import ContactInformation from '@/components/ContactInformation.vue'
 import MainMenu from '@/components/MainMenu.vue'
 import SocialMenu from '@/components/SocialMenu.vue'
+
+const currentYear = ref(new Date().getFullYear())
 </script>
 
 <template>
@@ -21,7 +24,9 @@ import SocialMenu from '@/components/SocialMenu.vue'
       <div class="footer__column">
         <main-menu class="footer__main-menu" />
         <social-menu :display-mode="2" class="footer__social-menu" />
-        <small class="footer__copyright"> ©2023 Probau Jakub Dylus Alle Rechte vorbehalten </small>
+        <small class="footer__copyright">
+          &copy;{{ currentYear }} Probau Jakub Dylus Alle Rechte vorbehalten
+        </small>
       </div>
     </div>
   </footer>
