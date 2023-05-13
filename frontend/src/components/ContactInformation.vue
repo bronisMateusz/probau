@@ -43,9 +43,9 @@ onMounted(() => {
       {{ attributes.phone_number }}
     </a>
     <br />
-    <a :href="`mailto:${attributes.mail}`" class="contact-information__link">{{
-      attributes.mail
-    }}</a>
+    <a :href="`mailto:${attributes.mail}`" class="contact-information__link">
+      {{ attributes.mail }}
+    </a>
   </address>
 </template>
 
