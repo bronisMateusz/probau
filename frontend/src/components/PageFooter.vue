@@ -1,4 +1,5 @@
 <script setup>
+import ContactInformation from '@/components/ContactInformation.vue'
 import MainMenu from '@/components/MainMenu.vue'
 </script>
 
@@ -6,13 +7,14 @@ import MainMenu from '@/components/MainMenu.vue'
   <footer class="footer col-50-50">
     <div class="footer__column">
       <div class="footer__logos">
-        <a class="navbar__brand" href="/">
+        <a href="/">
           <img src="@/assets/images/probau-logo.svg" alt="Probau logo" />
         </a>
-        <a class="navbar__brand" href="http://importerkoparek.eu/de/">
+        <a href="http://importerkoparek.eu/de/" target="_blank">
           <img src="@/assets/images/kingway-logo.svg" alt="Kingway logo" />
         </a>
       </div>
+      <contact-information :invert-colors="true" class="footer__contact" />
     </div>
     <div class="footer__column">
       <main-menu class="footer__menu" />
@@ -33,10 +35,18 @@ import MainMenu from '@/components/MainMenu.vue'
     &:first-child {
       $border-style: 1px solid $color-tertiary;
       border-bottom: $border-style;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
 
       @media (min-width: $lg) {
         border-bottom: unset;
         border-right: $border-style;
+      }
+      @media (min-width: $xl) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
       }
     }
   }
@@ -59,6 +69,14 @@ import MainMenu from '@/components/MainMenu.vue'
         height: 100%;
         width: 240px;
       }
+    }
+  }
+
+  &__contact {
+    text-align: center;
+
+    @media (min-width: $xl) {
+      text-align: left;
     }
   }
 
