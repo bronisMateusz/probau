@@ -1,6 +1,7 @@
 <script setup>
 import ContactInformation from '@/components/ContactInformation.vue'
 import MainMenu from '@/components/MainMenu.vue'
+import SocialMenu from '@/components/SocialMenu.vue'
 </script>
 
 <template>
@@ -9,16 +10,17 @@ import MainMenu from '@/components/MainMenu.vue'
       <div class="footer__column">
         <div class="footer__logos">
           <a href="/">
-            <img src="@/assets/images/probau-logo.svg" alt="Probau logo" />
+            <img src="@/assets/images/probau-logo.svg" alt="Probau link" />
           </a>
           <a href="http://importerkoparek.eu/de/" target="_blank">
-            <img src="@/assets/images/kingway-logo.svg" alt="Kingway logo" />
+            <img src="@/assets/images/kingway-logo.svg" alt="Kingway link" />
           </a>
         </div>
         <contact-information :invert-colors="true" class="footer__contact" />
       </div>
       <div class="footer__column">
-        <main-menu class="footer__menu" />
+        <main-menu class="footer__main-menu" />
+        <social-menu :display-mode="2" class="footer__social-menu" />
         <small class="footer__copyright"> ©2023 Probau Jakub Dylus Alle Rechte vorbehalten </small>
       </div>
     </div>
@@ -27,11 +29,13 @@ import MainMenu from '@/components/MainMenu.vue'
 
 <style lang="scss">
 .footer {
-  align-items: center;
   background-color: #1e1e1e;
   color: $color-text-inverted;
 
   &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
     padding: 60px 20px;
 
     @media (min-width: $lg) {
@@ -44,9 +48,6 @@ import MainMenu from '@/components/MainMenu.vue'
     &:first-child {
       $border-style: 1px solid $color-tertiary;
       border-bottom: $border-style;
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
 
       @media (min-width: $lg) {
         border-bottom: unset;
@@ -70,7 +71,7 @@ import MainMenu from '@/components/MainMenu.vue'
       height: 50px;
     }
 
-    @media (min-width: $lg) {
+    @media (min-width: $xl) {
       flex-direction: column;
       gap: 32px;
 
@@ -89,7 +90,7 @@ import MainMenu from '@/components/MainMenu.vue'
     }
   }
 
-  &__menu {
+  &__main-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -106,6 +107,12 @@ import MainMenu from '@/components/MainMenu.vue'
         padding: 8px 16px;
       }
     }
+  }
+
+  &__social-menu {
+    max-width: 360px;
+    margin-left: auto;
+    width: 100%;
   }
 
   &__copyright {

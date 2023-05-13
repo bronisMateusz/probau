@@ -23,7 +23,7 @@ const updatePhoneNumber = (value) => {
   <header id="page-header">
     <nav class="navbar">
       <a class="navbar__brand" href="/">
-        <img src="@/assets/images/probau-logo.svg" alt="Probau logo" />
+        <img src="@/assets/images/probau-logo.svg" alt="Probau link" />
       </a>
       <button class="navbar__toggler" aria-label="Menu toggler" @click.prevent="toggleMenu">
         <span class="navbar__toggler--bar"></span>
