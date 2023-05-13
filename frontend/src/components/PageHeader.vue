@@ -10,12 +10,12 @@ const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
 
-const updatePhoneNumber = (value) => {
-  phoneNumber.value = value
-}
-
 const updateMail = (value) => {
   mail.value = value
+}
+
+const updatePhoneNumber = (value) => {
+  phoneNumber.value = value
 }
 </script>
 
@@ -32,10 +32,11 @@ const updateMail = (value) => {
       </button>
       <div class="navbar__menu" :class="{ active: isMenuOpen }">
         <main-menu
-          :phone-number="phoneNumber"
+          class="navbar__menu--list"
           :mail="mail"
-          @update-phone-number="updatePhoneNumber"
+          :phone-number="phoneNumber"
           @update-mail="updateMail"
+          @update-phone-number="updatePhoneNumber"
         />
         <div class="navbar__contact">
           <a :href="`tel:${phoneNumber}`">{{ phoneNumber }}</a>
@@ -143,13 +144,9 @@ const updateMail = (value) => {
       }
 
       &--list {
-        list-style: none;
-        padding: 0;
-      }
-
-      &--link {
-        display: block;
-        padding: 10px 20px;
+        a {
+          padding: 10px 20px;
+        }
       }
 
       @media (min-width: $lg) {
