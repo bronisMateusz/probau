@@ -1,0 +1,22 @@
+{
+  "name": "probau",
+  "private": true,
+  "engines": {
+    "node": "18.x"
+  },
+  "workspaces": [
+    "./*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "dev:backend": "yarn workspace backend dev",
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev": "npm-run-all --parallel dev:backend dev:frontend",
+    "start:backend": "yarn workspace backend start",
+    "start": "npm-run-all --parallel start:backend dev:frontend"
+  },
+  "packageManager": "yarn@1.22.19",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
