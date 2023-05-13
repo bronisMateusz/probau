@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_informations",
+  "info": {
+    "singularName": "contact-information",
+    "pluralName": "contact-informations",
+    "displayName": "Informacje kontaktowe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "company_name": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true
+    },
+    "phone_number": {
+      "type": "string",
+      "required": true
+    },
+    "mail": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

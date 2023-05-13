@@ -1,0 +1,13 @@
+@use './variables.scss' as *;
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.col-50-50 {
+  @media (min-width: $lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

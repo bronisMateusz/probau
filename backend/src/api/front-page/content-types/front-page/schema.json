@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "front_pages",
+  "info": {
+    "singularName": "front-page",
+    "pluralName": "front-pages",
+    "displayName": "Strona główna",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "about_us_body": {
+      "type": "richtext",
+      "required": true
+    },
+    "about_us_title": {
+      "type": "richtext",
+      "required": true
+    },
+    "slider": {
+      "type": "component",
+      "repeatable": false,
+      "component": "bloki.slider"
+    },
+    "offer_slider": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
