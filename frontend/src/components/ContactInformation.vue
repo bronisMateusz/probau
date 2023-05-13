@@ -33,7 +33,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <address class="contact-information" :class="invertColors ? 'invert' : ''">
+  <address class="contact-information" :class="{ invert: invertColors }">
     <h2 v-if="displayHeading" class="contact-information__heading">
       {{ attributes.company_name }}
     </h2>
