@@ -1,27 +1,16 @@
 <script setup>
-import PageNavbar from '@/components/PageNavbar.vue'
+import PageHeader from '@/components/PageHeader.vue'
+import PageFooter from '@/components/PageFooter.vue'
 </script>
 
 <template>
-  <header id="page-header">
-    <page-navbar />
-  </header>
+  <page-header />
+  <main></main>
+  <page-footer />
 </template>
 
 <style lang="scss">
-#page-header {
-  background-color: $color-tertiary;
-  color: $color-text-inverted;
-  inset: 0 0 auto;
-  padding: 10px 10px 10px 20px;
-  position: fixed;
-
-  @media (min-width: $lg) {
-    padding: 0 15px;
-  }
-
-  @media (min-width: $xxl) {
-    padding-right: 240px;
-  }
+main {
+  min-height: 100vh;
 }
 </style>
