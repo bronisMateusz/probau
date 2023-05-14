@@ -1,13 +1,32 @@
 @use './variables.scss' as *;
 
 .container {
-  max-width: 1400px;
   margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 20px;
+
+  @media (min-width: $xxl) {
+    padding: 0;
+  }
 }
 
 .col-50-50 {
   @media (min-width: $lg) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.btn-primary {
+  background-color: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  color: $color-secondary;
+  font-family: $knucklehead;
+  font-size: 1.5rem;
+  padding: 20px 60px;
+
+  @media (min-width: $lg) {
+    font-size: 2.25rem;
+    padding: 24px 112px;
   }
 }
