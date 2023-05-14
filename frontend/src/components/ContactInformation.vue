@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+
 defineProps({
   displayHeading: {
     type: Boolean,
@@ -10,6 +11,7 @@ defineProps({
     default: false
   }
 })
+
 const attributes = ref({})
 
 onMounted(() => {
