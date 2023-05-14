@@ -5,12 +5,12 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html,
 body {
   height: 100%;
-  padding: 0;
 }
 
 body {
@@ -28,6 +28,11 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding-top: 76px;
+
+  @media (min-width: $lg) {
+    padding-top: 112px;
+  }
 }
 
 main {
@@ -38,4 +43,52 @@ button {
   background: unset;
   border: unset;
   cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $knucklehead;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3.75rem;
+  line-height: 1em;
+
+  @media (min-width: $lg) {
+    font-size: 6rem;
+  }
+}
+
+input,
+textarea {
+  border: unset;
+  border-bottom: 1px solid #1e1e1e;
+  background-color: transparent;
+  color: #1e1e1e;
+  font-size: 1.25rem;
+  padding: 16px;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-tertiary;
+  }
+
+  &:focus-visible {
+    outline: unset;
+  }
+
+  @media (min-width: $lg) {
+    font-size: 1.5rem;
+    padding: 26px;
+  }
+}
+
+textarea {
+  font-family: $roboto;
+  resize: none;
 }
