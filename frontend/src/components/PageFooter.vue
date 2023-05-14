@@ -41,12 +41,9 @@ const currentYear = ref(new Date().getFullYear())
     display: flex;
     flex-direction: column;
     gap: 60px;
-    padding: 60px 20px;
+    padding: 60px 0;
 
     @media (min-width: $lg) {
-      padding: 120px 20px;
-    }
-    @media (min-width: $xxl) {
       padding: 120px 0;
     }
 

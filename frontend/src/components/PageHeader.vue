@@ -54,6 +54,7 @@ const updatePhoneNumber = (value) => {
   inset: 0 0 auto;
   padding: 10px 10px 10px 20px;
   position: fixed;
+  z-index: 10;
 
   @media (min-width: $lg) {
     padding: 0 15px;
