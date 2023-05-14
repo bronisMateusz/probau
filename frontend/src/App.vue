@@ -8,9 +8,3 @@ import PageFooter from '@/components/PageFooter.vue'
   <main></main>
   <page-footer />
 </template>
-
-<style lang="scss">
-main {
-  min-height: 100vh;
-}
-</style>
