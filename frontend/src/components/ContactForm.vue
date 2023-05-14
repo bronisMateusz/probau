@@ -8,19 +8,13 @@ const baseUrl = 'http://localhost:1337'
 const generateSrcset = () => {
   const { formats } = attributes.value.picture.data.attributes
   return `
-    ${baseUrl}${formats.thumbnail.url} ${formats.thumbnail.width}w,
     ${baseUrl}${formats.small.url} ${formats.small.width}w,
     ${baseUrl}${formats.medium.url} ${formats.medium.width}w
   `
 }
 
 // Generate the sizes attribute value for the responsive image
-const generateSizes = () => {
-  return `
-    (max-width: 640px) 500px,
-    750px
-  `
-}
+const generateSizes = () => '(max-width: 640px) 500px, 750px'
 
 onMounted(() => {
   // Handle the response from the API
@@ -168,6 +162,7 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
     @media (min-width: $xl) {
       &::after {
         left: -80px;
+        width: 50vw;
       }
     }
   }
