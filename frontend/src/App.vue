@@ -5,6 +5,8 @@ import PageFooter from '@/components/PageFooter.vue'
 
 <template>
   <page-header />
-  <main></main>
+  <main>
+    <router-view />
+  </main>
   <page-footer />
 </template>
