@@ -8,7 +8,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/assets/scss/styles.scss";`
+        additionalData: `@use "@/assets/scss/variables.scss" as *;`
       }
     }
   },
@@ -19,6 +19,6 @@ export default defineConfig({
     }
   },
   server: {
-    host: true,
+    host: true
   }
 })

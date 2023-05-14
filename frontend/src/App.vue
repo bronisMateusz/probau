@@ -10,3 +10,7 @@ import PageFooter from '@/components/PageFooter.vue'
   </main>
   <page-footer />
 </template>
+
+<style lang="scss">
+@use '@//assets/scss/styles.scss' as *;
+</style>
