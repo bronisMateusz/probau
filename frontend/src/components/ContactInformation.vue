@@ -64,7 +64,7 @@ onMounted(() => {
   }
 
   &__heading {
-    font: 400 2.5rem $knucklehead;
+    font-size: 2.5rem;
     margin-bottom: 16px;
   }
 
