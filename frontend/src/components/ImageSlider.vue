@@ -90,7 +90,7 @@ onUnmounted(() => stopSlider())
   position: relative;
 
   &::after {
-    background-color: white;
+    background-color: $color-background;
     bottom: 0;
     content: '';
     inset: 80% 0 0;
