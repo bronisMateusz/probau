@@ -66,7 +66,6 @@ onMounted(() => {
 <style lang="scss">
 .main-menu {
   list-style: none;
-  padding: 0;
 
   &--link {
     display: block;

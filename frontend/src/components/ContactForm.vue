@@ -116,8 +116,8 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
       content: '';
       left: -20px;
       height: 95%;
-      width: 10px;
       position: absolute;
+      width: 10px;
     }
 
     @media (min-width: $lg) {

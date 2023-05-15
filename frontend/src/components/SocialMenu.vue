@@ -86,7 +86,6 @@ $border-style: 1px solid $color-secondary;
   &__list {
     display: flex;
     list-style: none;
-    padding: 0;
 
     &--item.hidden {
       display: none;
