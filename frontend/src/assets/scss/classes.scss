@@ -34,9 +34,15 @@
 }
 
 .btn-redirect {
+  $size: 66px;
+
+  @media (min-width: $lg) {
+    $size: 86px;
+  }
+
   display: inline-block;
   line-height: 1em;
-  margin-left: 66px;
+  margin-left: $size;
   position: relative;
 
   &::before {
@@ -44,10 +50,10 @@
     border: 1px solid $color-tertiary;
     content: '';
     display: block;
-    height: 66px;
-    width: 66px;
+    height: $size;
+    width: $size;
     position: absolute;
-    left: -66px;
+    left: -$size;
     top: -1px;
   }
 }
