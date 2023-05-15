@@ -17,16 +17,37 @@
   }
 }
 
-.btn-primary {
+.btn-primary,
+.btn-redirect {
   background-color: #1e1e1e;
   border: 1px solid #1e1e1e;
   color: $color-secondary;
   font-family: $knucklehead;
   font-size: 1.5rem;
+  line-height: 1em;
   padding: 20px 60px;
 
   @media (min-width: $lg) {
     font-size: 2.25rem;
     padding: 24px 112px;
+  }
+}
+
+.btn-redirect {
+  display: inline-block;
+  line-height: 1em;
+  margin-left: 66px;
+  position: relative;
+
+  &::before {
+    background: url('@/assets/images/icons/redirect-arrow.svg') no-repeat center/30% $color-background;
+    border: 1px solid $color-tertiary;
+    content: '';
+    display: block;
+    height: 66px;
+    width: 66px;
+    position: absolute;
+    left: -66px;
+    top: -1px;
   }
 }
