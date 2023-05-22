@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: mystrapi
     image: mystrapi:latest
-    restart: no
+    restart: unless-stopped
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
