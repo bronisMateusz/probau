@@ -154,8 +154,8 @@ const updatePhoneNumber = (value) => {
         align-items: center;
         grid-template-columns: 1fr auto;
         margin-left: auto;
-        position: revert;
         padding: 26px 0;
+        position: revert;
         width: calc(100% - 210px);
 
         &:not(.active) {

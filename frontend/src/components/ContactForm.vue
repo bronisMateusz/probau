@@ -96,8 +96,8 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
       content: '';
       height: 2px;
       left: 0;
-      right: 0;
       position: absolute;
+      right: 0;
       top: 100px;
     }
   }
@@ -108,19 +108,21 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
   }
 
   &__title {
+    font-size: 3.75rem;
     margin-bottom: 20px;
     position: relative;
 
     &::before {
       background-color: $color-text;
       content: '';
-      left: -20px;
       height: 95%;
+      left: -20px;
       position: absolute;
       width: 10px;
     }
 
     @media (min-width: $lg) {
+      font-size: 5rem;
       margin-top: 148px;
 
       &::before {
@@ -129,8 +131,11 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
     }
 
     @media (min-width: $xl) {
+      font-size: 6rem;
+
       &::before {
-        left: -80px;
+        left: -85px;
+        z-index: 2;
       }
     }
   }
@@ -146,8 +151,8 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
       content: '';
       height: 2px;
       left: -20px;
-      right: -20px;
       position: absolute;
+      right: -20px;
       top: calc(100% + 57px);
     }
 
@@ -192,9 +197,9 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
 
   &__image {
     aspect-ratio: 5/8;
+    height: 100%;
     margin: 0 -20px;
     object-fit: cover;
-    height: 100%;
     width: calc(100% + 40px);
     z-index: 1;
 

@@ -93,11 +93,11 @@ $border-style: 1px solid $color-secondary;
 
     &--link {
       align-items: center;
-      display: flex;
-      justify-content: center;
-      height: 60px;
-      width: 60px;
       border-left: $border-style;
+      display: flex;
+      height: 60px;
+      justify-content: center;
+      width: 60px;
     }
   }
 }

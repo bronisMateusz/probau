@@ -48,12 +48,15 @@ const currentYear = ref(new Date().getFullYear())
     }
 
     &:first-child {
-      $border-style: 1px solid $color-tertiary;
+      $border-style: 2px solid $color-tertiary;
       border-bottom: $border-style;
+      margin-left: -20px;
+      margin-right: -20px;
 
       @media (min-width: $lg) {
         border-bottom: unset;
         border-right: $border-style;
+        margin: 0;
       }
       @media (min-width: $xl) {
         align-items: center;
@@ -112,8 +115,9 @@ const currentYear = ref(new Date().getFullYear())
   }
 
   &__social-menu {
-    max-width: 360px;
     margin: 0 auto;
+    max-width: 360px;
+    opacity: 0.4;
     width: 100%;
 
     @media (min-width: $xl) {

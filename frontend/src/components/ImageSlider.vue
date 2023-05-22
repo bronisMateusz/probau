@@ -154,7 +154,6 @@ onUnmounted(() => stopSlider())
 
     @media (min-width: $lg) {
       aspect-ratio: unset;
-      background: linear-gradient(320.17deg, $color-secondary 0%, $color-background 55.71%);
 
       .slider__slides {
         height: calc(100% - 166px);
@@ -204,8 +203,8 @@ onUnmounted(() => stopSlider())
     background-color: $color-tertiary;
     display: block;
     height: 16px;
-    width: 16px;
     transition: background-color 0.3s ease-in-out;
+    width: 16px;
 
     &.active {
       background-color: $color-primary;

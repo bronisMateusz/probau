@@ -68,8 +68,8 @@ onMounted(() => {
   list-style: none;
 
   &--link {
-    display: block;
     color: $color-text-inverted;
+    display: block;
 
     &:not(:hover) {
       text-decoration: none;

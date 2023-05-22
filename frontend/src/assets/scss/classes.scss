@@ -42,15 +42,16 @@
   position: relative;
 
   &::before {
-    background: url('@/assets/images/icons/redirect-arrow.svg') no-repeat center/30% $color-background;
+    background: url('@/assets/images/icons/redirect-arrow.svg') no-repeat center/30%
+      $color-background;
     border: 1px solid $color-tertiary;
     content: '';
     display: block;
     height: $size;
-    width: $size;
-    position: absolute;
     left: -$size;
+    position: absolute;
     top: -1px;
+    width: $size;
   }
 
   @media (min-width: $lg) {
@@ -60,8 +61,8 @@
 
     &::before {
       height: $size;
-      width: $size;
       left: -$size;
+      width: $size;
     }
   }
 }
