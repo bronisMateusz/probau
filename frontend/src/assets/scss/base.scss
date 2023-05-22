@@ -37,6 +37,22 @@ body {
 
 main {
   flex-grow: 1;
+  position: relative;
+
+  @media (min-width: $xxl) {
+    &::before {
+      background-color: $color-secondary;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: calc(100% + 6px);
+      left: calc(50% - 700px);
+      position: absolute;
+      top: 0;
+      width: 2px;
+      z-index: 1;
+    }
+  }
 }
 
 button {

@@ -237,6 +237,11 @@ $border-style: 2px solid $color-secondary;
       $color-secondary 60%,
       $color-background 90%
     );
+    padding: 100px 0;
+  }
+
+  @media (min-width: $xxl) {
+    padding-top: 200px;
   }
 
   &__title {
@@ -267,11 +272,17 @@ $border-style: 2px solid $color-secondary;
       margin-right: 0;
     }
 
-    @media (min-width: $xxl) {
+    @media (min-width: $xl) {
       &::after {
-        left: -12.5vw;
-        width: 50vw;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200vw;
       }
+    }
+
+    @media (min-width: $xxl) {
+      margin-left: -4px;
+      z-index: 1;
     }
   }
 
@@ -330,6 +341,10 @@ $border-style: 2px solid $color-secondary;
         padding: 80px;
       }
     }
+
+    @media (min-width: $xxl) {
+      margin: 0;
+    }
   }
 
   &__image {
@@ -346,6 +361,12 @@ $border-style: 2px solid $color-secondary;
       margin: -35% 0 50% -50%;
       object-fit: unset;
       z-index: 1;
+    }
+
+    @media (min-width: $xxl) {
+      height: 175%;
+      margin-top: -57.5%;
+      width: 175%;
     }
   }
 
