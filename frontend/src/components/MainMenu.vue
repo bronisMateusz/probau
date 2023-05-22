@@ -66,11 +66,10 @@ onMounted(() => {
 <style lang="scss">
 .main-menu {
   list-style: none;
-  padding: 0;
 
   &--link {
-    display: block;
     color: $color-text-inverted;
+    display: block;
 
     &:not(:hover) {
       text-decoration: none;

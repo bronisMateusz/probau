@@ -1,6 +1,9 @@
 version: '3.9'
 services:
   mystrapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: mystrapi
     image: mystrapi:latest
     restart: unless-stopped

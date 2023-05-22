@@ -5,23 +5,106 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
-  min-height: 100vh;
-  color: $color-text;
-  background: $color-background;
-  transition: color 0.5s, background-color 0.5s;
-  line-height: 1.5;
-  font-family: $roboto;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: $color-background;
+  color: $color-text;
+  font-family: $roboto;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 76px;
+
+  @media (min-width: $lg) {
+    padding-top: 112px;
+  }
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+
+  @media (min-width: $xxl) {
+    &::before {
+      background-color: $color-secondary;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: calc(100% + 6px);
+      left: calc(50% - 700px);
+      position: absolute;
+      top: 0;
+      width: 2px;
+      z-index: 1;
+    }
+  }
 }
 
 button {
   background: unset;
   border: unset;
   cursor: pointer;
-  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $knucklehead;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 5rem;
+  line-height: 1em;
+
+  @media (min-width: $xl) {
+    font-size: 6rem;
+  }
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: unset;
+  border-bottom: 1px solid #1e1e1e;
+  color: #1e1e1e;
+  font-size: 1.25rem;
+  padding: 16px;
+  width: 100%;
+
+  &::placeholder {
+    color: $color-tertiary;
+  }
+
+  &:focus-visible {
+    outline: unset;
+  }
+
+  @media (min-width: $lg) {
+    font-size: 1.5rem;
+    padding: 26px;
+  }
+}
+
+textarea {
+  font-family: $roboto;
+  resize: none;
 }

@@ -5,12 +5,12 @@ import PageFooter from '@/components/PageFooter.vue'
 
 <template>
   <page-header />
-  <main></main>
+  <main>
+    <router-view />
+  </main>
   <page-footer />
 </template>
 
 <style lang="scss">
-main {
-  min-height: 100vh;
-}
+@use '@//assets/scss/styles.scss' as *;
 </style>

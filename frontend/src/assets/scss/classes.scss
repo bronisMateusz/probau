@@ -1,13 +1,68 @@
 @use './variables.scss' as *;
 
 .container {
-  max-width: 1400px;
   margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 20px;
+
+  @media (min-width: $xxl) {
+    padding: 0;
+  }
 }
 
 .col-50-50 {
   @media (min-width: $lg) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.btn-primary,
+.btn-redirect {
+  background-color: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  color: $color-secondary;
+  font-family: $knucklehead;
+  font-size: 1.5rem;
+  line-height: 1em;
+  padding: 20px 60px;
+
+  @media (min-width: $lg) {
+    font-size: 2.25rem;
+    padding: 24px 112px;
+  }
+}
+
+.btn-redirect {
+  $size: 66px;
+
+  display: inline-block;
+  line-height: 1em;
+  margin-left: $size;
+  position: relative;
+
+  &::before {
+    background: url('@/assets/images/icons/redirect-arrow.svg') no-repeat center/30%
+      $color-background;
+    border: 1px solid $color-tertiary;
+    content: '';
+    display: block;
+    height: $size;
+    left: -$size;
+    position: absolute;
+    top: -1px;
+    width: $size;
+  }
+
+  @media (min-width: $lg) {
+    $size: 86px;
+
+    margin-left: $size;
+
+    &::before {
+      height: $size;
+      left: -$size;
+      width: $size;
+    }
   }
 }

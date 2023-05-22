@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue'
+
 defineProps({
   displayHeading: {
     type: Boolean,
@@ -10,6 +11,7 @@ defineProps({
     default: false
   }
 })
+
 const attributes = ref({})
 
 onMounted(() => {
@@ -64,7 +66,7 @@ onMounted(() => {
   }
 
   &__heading {
-    font: 400 2.5rem $knucklehead;
+    font-size: 2.5rem;
     margin-bottom: 16px;
   }
 
