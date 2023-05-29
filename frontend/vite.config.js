@@ -20,6 +20,10 @@ export default defineConfig({
     }
   },
   server: {
-    host: true
+    host: true,
+    hmr: {
+      protocol: 'ws',
+      clientPort: process.env.VITE_PORT || 5173
+    }
   }
 })
