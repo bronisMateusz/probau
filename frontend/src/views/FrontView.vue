@@ -34,7 +34,9 @@ onMounted(() => {
   const handleError = (error) => console.error('There was a problem with the request:', error)
 
   fetch(
-    'http://localhost:1337/api/front-page?populate[slider][populate]=*&populate[offer_slider][populate]=*'
+    `${
+      import.meta.env.VITE_BASE_URL
+    }/api/front-page?populate[slider][populate]=*&populate[offer_slider][populate]=*`
   )
     .then(handleResponse)
     .then(handleData)

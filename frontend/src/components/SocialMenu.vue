@@ -35,7 +35,7 @@ onMounted(() => {
   // Handle any errors that may occur
   const handleError = (error) => console.error('There was a problem with the request:', error)
 
-  fetch('http://localhost:1337/api/menus/2?populate=*')
+  fetch(`${import.meta.env.VITE_BASE_URL}/api/menus/2?populate=*`)
     .then(handleResponse)
     .then(handleData)
     .catch(handleError)

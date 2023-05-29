@@ -21,6 +21,7 @@ services:
     volumes:
       - ./backend:/opt/app/backend
       - ./frontend:/opt/app/frontend
+      - ./.env:/opt/app/.env
     ports:
       - '${PORT:-1337}:1337'
       - '${VITE_PORT:-5173}:5173'

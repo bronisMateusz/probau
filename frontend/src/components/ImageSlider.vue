@@ -16,7 +16,7 @@ const props = defineProps({
 const title = ref('')
 const pictures = ref([])
 
-const baseUrl = 'http://localhost:1337'
+const baseUrl = import.meta.env.VITE_BASE_URL
 
 // Generate the srcset attribute value for the responsive image
 const generateSrcset = (formats) => {

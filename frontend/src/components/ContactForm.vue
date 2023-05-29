@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue'
 
 const attributes = ref({})
 
-const baseUrl = 'http://localhost:1337'
+const baseUrl = import.meta.env.VITE_BASE_URL
 // Generate the srcset attribute value for the responsive image
 const generateSrcset = () => {
   const { formats } = attributes.value.picture.data.attributes
@@ -31,7 +31,7 @@ onMounted(() => {
   // Handle any errors that may occur
   const handleError = (error) => console.error('There was a problem with the request:', error)
 
-  fetch('http://localhost:1337/api/contact-form?populate=picture')
+  fetch(`${baseUrl}/api/contact-form?populate=picture`)
     .then(handleResponse)
     .then(handleData)
     .catch(handleError)

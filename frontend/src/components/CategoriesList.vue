@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 
 const categories = ref({})
-const baseUrl = 'http://localhost:1337'
+const baseUrl = import.meta.env.VITE_BASE_URL
 
 onMounted(() => {
   // Handle the response from the API
@@ -28,7 +28,7 @@ onMounted(() => {
   // Handle any errors that may occur
   const handleError = (error) => console.error('There was a problem with the request:', error)
 
-  fetch('http://localhost:1337/api/categories?populate=*')
+  fetch(`${baseUrl}/api/categories?populate=*`)
     .then(handleResponse)
     .then(handleData)
     .catch(handleError)
