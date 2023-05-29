@@ -71,7 +71,7 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
       </form>
       <img
         v-if="attributes.picture && attributes.picture.data"
-        :src="attributes.picture.data.attributes.url"
+        :src="`${baseUrl}${attributes.picture.data.attributes.url}`"
         :alt="attributes.picture.data.attributes.alternativeText"
         :srcset="generateSrcset()"
         :sizes="generateSizes()"

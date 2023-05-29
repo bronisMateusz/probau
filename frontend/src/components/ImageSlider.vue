@@ -42,7 +42,7 @@ watch(
 
     const data = props.displayMode === 1 ? props.attributes.pictures.data : props.attributes.data
     pictures.value = data.map((picture) => ({
-      src: picture.attributes.formats.medium.url,
+      src: `${baseUrl}${picture.attributes.formats.medium.url}`,
       alt: picture.attributes.alternativeText,
       srcset: generateSrcset(picture.attributes.formats),
       sizes: generateSizes()
