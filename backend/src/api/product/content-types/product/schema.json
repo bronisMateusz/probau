@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Produkt"
+    "displayName": "Produkt",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,18 +17,26 @@
       "required": true,
       "unique": true
     },
-    "photos": {
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "table": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     },
     "category": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "products"
+      "inversedBy": "produkts"
     }
   }
 }
