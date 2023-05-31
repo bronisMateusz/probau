@@ -45,7 +45,7 @@ main {
       bottom: 0;
       content: '';
       display: block;
-      height: calc(100% + 6px);
+      height: 100%;
       left: calc(50% - 700px);
       position: absolute;
       top: 0;
@@ -69,6 +69,15 @@ h5,
 h6 {
   font-family: $knucklehead;
   font-weight: 400;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 1em;
+
+  @media (min-width: $lg) {
+    font-size: 10.25rem;
+  }
 }
 
 h2 {

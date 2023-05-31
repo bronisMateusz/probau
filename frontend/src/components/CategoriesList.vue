@@ -33,19 +33,28 @@ onMounted(() => {
     .then(handleData)
     .catch(handleError)
 })
+
+const titleToUrl = (title) => title.toLowerCase().replace(' ', '-')
 </script>
 
 <template>
   <ul class="categories-list">
     <li v-for="category in categories" :key="category.id">
-      <a href="#" :aria-label="category.attributes.title" class="categories-list__link">
+      <router-link
+        :to="{
+          name: 'kategorie',
+          params: { name: titleToUrl(category.attributes.title) }
+        }"
+        :aria-label="category.attributes.title"
+        class="categories-list__link"
+      >
         <img
           :src="category.picture"
           :alt="`${category.attributes.title} icon`"
           class="categories-list__icon"
         />
         {{ category.attributes.title }}
-      </a>
+      </router-link>
     </li>
   </ul>
 </template>
