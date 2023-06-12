@@ -47,7 +47,7 @@ onMounted(() => {
   fetch(`${baseUrl}/api/categories`).then(handleResponse).then(handleData).catch(handleError)
 })
 
-const nameToUrl = (name) => `/product/${name.toLowerCase().replace(' ', '-')}`
+const nameToUrl = (name) => name.toLowerCase().replace(' ', '-')
 </script>
 
 <template>
@@ -59,16 +59,27 @@ const nameToUrl = (name) => `/product/${name.toLowerCase().replace(' ', '-')}`
   <ul class="product-list">
     <div class="container">
       <li class="product-list__item" v-for="product in products" :key="product.id">
-        <a :href="nameToUrl(product.attributes.name)" class="product-item">
+        <router-link
+          :to="{
+            name: 'product',
+            params: {
+              category: nameToUrl(category.title),
+              name: nameToUrl(product.attributes.name)
+            }
+          }"
+          :aria-label="product.attributes.name"
+          class="product-item"
+        >
           <article class="product-item__item">
             <h2 class="product-item__name">{{ product.attributes.name }}</h2>
             <img
               class="product-item__picture"
-              :srcset="generateSrcset(product.attributes.photo.data.attributes)"
+              :alt="product.attributes.photo.data.attributes.alternativeText"
               :src="`${baseUrl}${product.attributes.photo.data.attributes.url}`"
+              :srcset="generateSrcset(product.attributes.photo.data.attributes)"
             />
           </article>
-        </a>
+        </router-link>
       </li>
     </div>
   </ul>

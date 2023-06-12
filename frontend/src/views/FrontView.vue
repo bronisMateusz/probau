@@ -57,7 +57,6 @@ onMounted(() => {
       <h2 class="offer__title">Angebot</h2>
       <categories-list class="offer__categories" />
       <image-slider :attributes="attributes.offer_slider" :display-mode="2" class="offer__slider" />
-      <a class="offer__link btn-redirect" target="_blank">Mehr sehen</a>
     </div>
   </section>
   <section id="contact" class="map">
@@ -189,10 +188,11 @@ $border-style: 2px solid $color-secondary;
   }
 
   &__categories {
-    margin-top: 60px;
+    margin: 60px 0;
 
     @media (min-width: $lg) {
       grid-column: 2;
+      margin-bottom: 120px;
     }
 
     @media (min-width: $xl) {
@@ -207,21 +207,6 @@ $border-style: 2px solid $color-secondary;
     @media (min-width: $lg) {
       grid-row: 1/4;
       margin: 0 0 0 -20px;
-    }
-  }
-
-  &__link {
-    margin-top: 60px;
-
-    @media (min-width: $lg) {
-      margin-bottom: 80px;
-      margin-left: 136px;
-      width: fit-content;
-    }
-
-    @media (min-width: $xl) {
-      margin-left: 186px;
-      margin-top: 120px;
     }
   }
 }
@@ -291,6 +276,7 @@ $border-style: 2px solid $color-secondary;
   &__contact {
     background-color: rgba($color: $color-background, $alpha: 0.9);
     border: 1px solid $color-tertiary;
+    display: grid;
     margin: -1px auto auto;
     max-width: 550px;
     position: relative;
@@ -303,7 +289,7 @@ $border-style: 2px solid $color-secondary;
 
     .social-menu {
       border-color: $color-tertiary;
-      margin: 0 -1px -1px;
+      margin: auto -2px -2px;
 
       &__list--link {
         border-color: $color-tertiary;

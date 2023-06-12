@@ -22,7 +22,9 @@ onMounted(() => {
     })
 
     const sortedCategories = items.sort((a, b) => a.id - b.id)
-    categories.value = sortedCategories
+    categories.value = sortedCategories.filter(
+      (category) => category.attributes.products.data.length > 0
+    )
   }
 
   // Handle any errors that may occur
@@ -42,7 +44,7 @@ const titleToUrl = (title) => title.toLowerCase().replace(' ', '-')
     <li v-for="category in categories" :key="category.id">
       <router-link
         :to="{
-          name: 'kategorie',
+          name: 'category',
           params: { name: titleToUrl(category.attributes.title) }
         }"
         :aria-label="category.attributes.title"
