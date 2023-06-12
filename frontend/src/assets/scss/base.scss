@@ -1,5 +1,10 @@
 @use './variables.scss' as *;
 
+*::selection {
+  background: $color-primary;
+  color: $color-text;
+}
+
 *,
 *::before,
 *::after {

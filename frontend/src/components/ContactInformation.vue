@@ -76,6 +76,10 @@ onMounted(() => {
 
   &__link {
     color: $color-text;
+
+    &:hover {
+      color: $color-primary;
+    }
   }
 
   @media (min-width: $lg) {

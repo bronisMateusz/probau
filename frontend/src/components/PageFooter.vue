@@ -35,7 +35,7 @@ const currentYear = ref(new Date().getFullYear())
 <style lang="scss">
 .footer {
   background-color: #1e1e1e;
-  color: $color-text-inverted;
+  color: rgba($color: $color-text-inverted, $alpha: 0.4);
 
   &__column {
     display: flex;
@@ -117,7 +117,6 @@ const currentYear = ref(new Date().getFullYear())
   &__social-menu {
     margin: 0 auto;
     max-width: 360px;
-    opacity: 0.4;
     width: 100%;
 
     @media (min-width: $xl) {

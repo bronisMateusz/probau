@@ -289,13 +289,18 @@ $border-style: 2px solid $color-secondary;
 
     .social-menu {
       border-color: $color-tertiary;
-      margin: auto -2px -2px;
+      margin: auto -1px -1px;
 
       &__list--link {
         border-color: $color-tertiary;
 
         img {
           filter: brightness(0.1);
+        }
+
+        &:hover img {
+          filter: brightness(0) invert(73%) sepia(79%) saturate(1536%) hue-rotate(358deg)
+            brightness(94%) contrast(107%);
         }
       }
     }

@@ -69,7 +69,11 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-$border-style: 1px solid $color-secondary;
+$border-style: 1px solid
+  rgba(
+    $color: $color-text-inverted,
+    $alpha: 0.4
+  );
 
 .social-menu {
   align-items: center;
@@ -98,6 +102,18 @@ $border-style: 1px solid $color-secondary;
       height: 60px;
       justify-content: center;
       width: 60px;
+
+      img {
+        filter: invert(52%) sepia(0%) saturate(38%) hue-rotate(195deg) brightness(96%) contrast(68%);
+      }
+
+      &:hover,
+      &:focus {
+        img {
+          filter: brightness(0) invert(73%) sepia(79%) saturate(1536%) hue-rotate(358deg)
+            brightness(94%) contrast(107%);
+        }
+      }
     }
   }
 }
