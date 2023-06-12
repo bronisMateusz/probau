@@ -13,6 +13,9 @@ export default defineConfig({
       }
     }
   },
+  optimizeDeps: {
+    exclude: ['emailjs-com']
+  },
   plugins: [vue()],
   resolve: {
     alias: {

@@ -40,6 +40,39 @@ onMounted(() => {
 const nameLabel = 'Name'
 const emailLabel = 'E-mail'
 const textareaLabel = 'Stellen Sie Ihre Frage...'
+
+import emailjs from 'emailjs-com'
+
+const formData = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const sendEmail = () => {
+  const templateParams = {
+    name: formData.value.name,
+    from_email: formData.value.email,
+    message: formData.value.message
+  }
+
+  emailjs
+    .send(
+      import.meta.env.VITE_EMAIL_SERVICE,
+      import.meta.env.VITE_EMAIL_TEMPLATE,
+      templateParams,
+      import.meta.env.VITE_EMAIL_USER
+    )
+    .then(
+      () => {
+        // Reset form fields
+        formData.value.name = ''
+        formData.value.email = ''
+        formData.value.message = ''
+      },
+      (error) => console.log(error)
+    )
+}
 </script>
 
 <template>
@@ -47,24 +80,37 @@ const textareaLabel = 'Stellen Sie Ihre Frage...'
     <div class="container">
       <h2 class="contact-form__title">{{ attributes.title }}</h2>
       <h3 class="contact-form__subtitle">{{ attributes.subtitle }}</h3>
-      <form class="contact-form__form">
+      <form class="contact-form__form" @submit.prevent="sendEmail">
         <p class="contact-form__form--item">
           <label for="name-input" class="contact-form__label">{{ nameLabel }}</label>
-          <input type="text" id="name-input" name="name" :placeholder="nameLabel" />
+          <input
+            type="text"
+            id="name-input"
+            name="name"
+            :placeholder="nameLabel"
+            v-model="formData.name"
+          />
         </p>
         <p class="contact-form__form--item">
           <label for="email-input" class="contact-form__label">{{ emailLabel }}</label>
-          <input type="email" id="email-input" name="email" :placeholder="emailLabel" />
+          <input
+            type="email"
+            id="email-input"
+            name="email"
+            :placeholder="emailLabel"
+            v-model="formData.email"
+          />
         </p>
         <p class="contact-form__form--item">
-          <label for="question-textarea" class="contact-form__label">
+          <label for="message-textarea" class="contact-form__label">
             {{ textareaLabel }}
           </label>
           <textarea
-            id="question-textarea"
-            name="question"
+            id="message-textarea"
+            name="message"
             rows="3"
             :placeholder="textareaLabel"
+            v-model="formData.message"
           ></textarea>
         </p>
         <button type="submit" class="contact-form__submit btn-primary">Ihre Frage senden</button>
