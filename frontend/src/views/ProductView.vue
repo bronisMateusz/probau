@@ -137,6 +137,7 @@ watch(lightboxVisible, (value) => {
   </div>
 
   <div
+    v-if="product.gallery"
     class="lightbox"
     :class="{ hidden: !lightboxVisible, opened: lightboxVisible }"
     @click.self="closeLightbox"
