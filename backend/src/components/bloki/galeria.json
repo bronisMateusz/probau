@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_bloki_galerias",
+  "info": {
+    "displayName": "Galeria"
+  },
+  "options": {},
+  "attributes": {
+    "pictures": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
