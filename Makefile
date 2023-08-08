@@ -6,4 +6,5 @@ make dev:
 	docker compose exec -it mystrapi bash
 
 make prod:
-	docker compose up -d -f Dockerfile.prod
+	docker build -f Dockerfile.prod .
+	docker compose up -d
