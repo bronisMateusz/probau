@@ -8,5 +8,5 @@ ENV NODE_ENV=${NODE_ENV}
 WORKDIR /opt/app
 COPY ./ .
 RUN yarn && yarn install
-RUN yarn build
+RUN ["yarn", "build"]
 CMD ["yarn", "dev"]
