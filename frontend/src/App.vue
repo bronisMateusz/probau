@@ -12,5 +12,5 @@ import PageFooter from '@/components/PageFooter.vue'
 </template>
 
 <style lang="scss">
-@use '@//assets/scss/styles.scss' as *;
+@use '@/assets/scss/styles.scss' as *;
 </style>
